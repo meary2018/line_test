@@ -70,13 +70,12 @@ def callback():
 def handle_message(event):
     #if event.reply_token == "00000000000000000000000000000000":
     #    return
-    
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返します。
  
 # ポート番号の設定
 if __name__ == "__main__":
-#    app.run()
+    app.run()
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port,debug=True)
