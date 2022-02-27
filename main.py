@@ -32,6 +32,7 @@ app = Flask(__name__)
 
 @app.route("/")#Flask動作確認のコード
 def say_hello():
+    print("Hello")
     return "Hello"
 
 
@@ -73,9 +74,11 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返します。
+    print("oumu")
  
 # ポート番号の設定
 if __name__ == "__main__":
+    print("run")
     app.run()
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port,debug=True)
