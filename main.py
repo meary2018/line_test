@@ -63,8 +63,8 @@ def callback():
  
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.reply_token == "00000000000000000000000000000000":
-        return
+    #if event.reply_token == "00000000000000000000000000000000":
+    #    return
     
     line_bot_api.reply_message(
         event.reply_token,
@@ -73,5 +73,5 @@ def handle_message(event):
 # ポート番号の設定
 if __name__ == "__main__":
 #    app.run()
-    port = int(os.getenv("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    port = int(os.getenv("PORT", 8080))
+    app.run(host="0.0.0.0", port=port,debug=True)
