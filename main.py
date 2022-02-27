@@ -13,19 +13,21 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+#Channel ID
+#1656927401
+
+#Channel secret
+#ce1d6367670fe42d41cf8225c165da3a
+
+#チャンネルアクセストークン(長期)
+#xISvQ2oOl07TRZFqHm+uSUM15JfFd2jgI3D9+d+nXTq3jwaax4lZWEw3Gd9HENN/jPZk1A0+xxpYoWJE3dhd7TkAbNf80720zzHPun9SP/KAuNTKazC1weCXP4ztQXxpIxdFQ4as/2sHAyO1puGYfAdB04t89/1O/w1cDnyilFU=
 
 
+LINE_CHANNEL_ACCESS_TOKEN='xISvQ2oOl07TRZFqHm+uSUM15JfFd2jgI3D9+d+nXTq3jwaax4lZWEw3Gd9HENN/jPZk1A0+xxpYoWJE3dhd7TkAbNf80720zzHPun9SP/KAuNTKazC1weCXP4ztQXxpIxdFQ4as/2sHAyO1puGYfAdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_SECRET='ce1d6367670fe42d41cf8225c165da3a'
 
-#アクセストークン
-#iuDwl1NzVNVdqLUn2kNvIsxUAZKOLiVJJVYw9/AOh6CIfGlxrsSKVd0Rdmn0K5P7NgvkIW6dOfj+AfABYkSWdEgYBvGNGLkP4O3bfUW5BIGC365NA8spC/KW8TRH22nLnt3AnGmEPRQmVCgeD2lDoAdB04t89/1O/w1cDnyilFU=
-#チャンネルシークレット
-#30187ee0e0d1a397b44add525ad55d07
-
-LINE_CHANNEL_ACCESS_TOKEN='0LEHVBVv/h167RB74qpA0svT1Q+pvcCoy5hBACEFg0HBx7lZz+ZtbGZmmUEwDwkQNgvkIW6dOfj+AfABYkSWdEgYBvGNGLkP4O3bfUW5BIH7o5QZXk4p8uraZvQCVOLsSkxyfUCgBXUdITPm8ROr/gdB04t89/1O/w1cDnyilFU='
-LINE_CHANNEL_SECRET='30187ee0e0d1a397b44add525ad55d07'
-
-line_bot_api = LineBotApi('0LEHVBVv/h167RB74qpA0svT1Q+pvcCoy5hBACEFg0HBx7lZz+ZtbGZmmUEwDwkQNgvkIW6dOfj+AfABYkSWdEgYBvGNGLkP4O3bfUW5BIH7o5QZXk4p8uraZvQCVOLsSkxyfUCgBXUdITPm8ROr/gdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('30187ee0e0d1a397b44add525ad55d07')
+line_bot_api = LineBotApi('xISvQ2oOl07TRZFqHm+uSUM15JfFd2jgI3D9+d+nXTq3jwaax4lZWEw3Gd9HENN/jPZk1A0+xxpYoWJE3dhd7TkAbNf80720zzHPun9SP/KAuNTKazC1weCXP4ztQXxpIxdFQ4as/2sHAyO1puGYfAdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('ce1d6367670fe42d41cf8225c165da3a')
 app = Flask(__name__)
 
 @app.route("/")#Flask動作確認のコード
