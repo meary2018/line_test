@@ -24,8 +24,8 @@ from linebot.models import (
 LINE_CHANNEL_ACCESS_TOKEN='0LEHVBVv/h167RB74qpA0svT1Q+pvcCoy5hBACEFg0HBx7lZz+ZtbGZmmUEwDwkQNgvkIW6dOfj+AfABYkSWdEgYBvGNGLkP4O3bfUW5BIH7o5QZXk4p8uraZvQCVOLsSkxyfUCgBXUdITPm8ROr/gdB04t89/1O/w1cDnyilFU='
 LINE_CHANNEL_SECRET='30187ee0e0d1a397b44add525ad55d07'
 
-line_bot_api = LineBotApi('0LEHVBVv/h167RB74qpA0svT1Q+pvcCoy5hBACEFg0HBx7lZz+ZtbGZmmUEwDwkQNgvkIW6dOfj+AfABYkSWdEgYBvGNGLkP4O3bfUW5BIH7o5QZXk4p8uraZvQCVOLsSkxyfUCgBXUdITPm8ROr/gdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('30187ee0e0d1a397b44add525ad55d07')
+line_bot_api = LineBotApi(os.environ.get('0LEHVBVv/h167RB74qpA0svT1Q+pvcCoy5hBACEFg0HBx7lZz+ZtbGZmmUEwDwkQNgvkIW6dOfj+AfABYkSWdEgYBvGNGLkP4O3bfUW5BIH7o5QZXk4p8uraZvQCVOLsSkxyfUCgBXUdITPm8ROr/gdB04t89/1O/w1cDnyilFU='))
+handler = WebhookHandler(os.environ.get('30187ee0e0d1a397b44add525ad55d07'))
 app = Flask(__name__)
 
 @app.route("/")#Flask動作確認のコード
